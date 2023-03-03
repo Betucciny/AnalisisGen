@@ -7,13 +7,20 @@ def main():
     binarios, tablab = archivo2array(path)
     mediab = np.mean(binarios, axis=0)
     print(mediab)
-    print(tablab)
 
     path = 'Reales/reales'
     reales, tablar = archivo2array(path)
     mediar = np.mean(reales, axis=0)
     print(mediar)
     print(tablar)
+    for nl, linea in enumerate(tablar):
+        print(nl+1, end=' & ')
+        for nc, num in enumerate(linea):
+            if nc == len(linea) - 1:
+                print(num, end=' \\\\')
+            else:
+                print(num, end=' & ')
+        print()
 
     x = np.arange(1, 5001, 1)
     plt.plot(x, mediab, label='Binario')
