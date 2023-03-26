@@ -15,7 +15,6 @@ def main():
                 print(num, end=' & ')
         print()
 
-
     x = np.arange(1, 501)
     plt.plot(x, FO_mean, label='Binomial')
     plt.show()
